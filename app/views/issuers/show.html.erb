@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Issuer id:</strong>
+  <%= @issuer.ISSUER_ID %>
+</p>
+
+<p>
+  <strong>Sendingtime:</strong>
+  <%= @issuer.SendingTime %>
+</p>
+
+<%= link_to 'Edit', edit_issuer_path(@issuer) %> |
+<%= link_to 'Back', issuers_path %>

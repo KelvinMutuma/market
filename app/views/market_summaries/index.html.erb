@@ -1,0 +1,31 @@
+<h1>Listing market_summaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trade volume</th>
+      <th>Share volume</th>
+      <th>Market type</th>
+      <th>Sendingtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @market_summaries.each do |market_summary| %>
+      <tr>
+        <td><%= market_summary.TRADE_VOLUME %></td>
+        <td><%= market_summary.SHARE_VOLUME %></td>
+        <td><%= market_summary.MARKET_TYPE %></td>
+        <td><%= market_summary.SendingTime %></td>
+        <td><%= link_to 'Show', market_summary %></td>
+        <td><%= link_to 'Edit', edit_market_summary_path(market_summary) %></td>
+        <td><%= link_to 'Destroy', market_summary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Market summary', new_market_summary_path %>

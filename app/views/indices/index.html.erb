@@ -1,0 +1,35 @@
+<h1>Listing indices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Index id</th>
+      <th>Index value</th>
+      <th>Index high value</th>
+      <th>Index low value</th>
+      <th>Market type</th>
+      <th>Sendingtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @indices.each do |index| %>
+      <tr>
+        <td><%= index.INDEX_ID %></td>
+        <td><%= index.INDEX_VALUE %></td>
+        <td><%= index.INDEX_HIGH_VALUE %></td>
+        <td><%= index.INDEX_LOW_VALUE %></td>
+        <td><%= index.MARKET_TYPE %></td>
+        <td><%= index.SendingTime %></td>
+        <td><%= link_to 'Show', index %></td>
+        <td><%= link_to 'Edit', edit_index_path(index) %></td>
+        <td><%= link_to 'Destroy', index, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Index', new_index_path %>

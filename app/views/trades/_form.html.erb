@@ -1,0 +1,57 @@
+<%= form_for(@trade) do |f| %>
+  <% if @trade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trade.errors.count, "error") %> prohibited this trade from being saved:</h2>
+
+      <ul>
+      <% @trade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :scaffold %><br>
+    <%= f.text_field :scaffold %>
+  </div>
+  <div class="field">
+    <%= f.label :SecurityID %><br>
+    <%= f.text_field :SecurityID %>
+  </div>
+  <div class="field">
+    <%= f.label :BOARD_ID %><br>
+    <%= f.text_field :BOARD_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :Price %><br>
+    <%= f.text_field :Price %>
+  </div>
+  <div class="field">
+    <%= f.label :Quantity %><br>
+    <%= f.text_field :Quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :TransactTime %><br>
+    <%= f.time_select :TransactTime %>
+  </div>
+  <div class="field">
+    <%= f.label :HI_TRADE %><br>
+    <%= f.number_field :HI_TRADE %>
+  </div>
+  <div class="field">
+    <%= f.label :LO_TRADE %><br>
+    <%= f.number_field :LO_TRADE %>
+  </div>
+  <div class="field">
+    <%= f.label :DATE %><br>
+    <%= f.date_select :DATE %>
+  </div>
+  <div class="field">
+    <%= f.label :SendingTime %><br>
+    <%= f.datetime_select :SendingTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

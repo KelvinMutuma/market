@@ -1,0 +1,27 @@
+<h1>Listing market_statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Sendingtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @market_statuses.each do |market_status| %>
+      <tr>
+        <td><%= market_status.STATUS %></td>
+        <td><%= market_status.SendingTime %></td>
+        <td><%= link_to 'Show', market_status %></td>
+        <td><%= link_to 'Edit', edit_market_status_path(market_status) %></td>
+        <td><%= link_to 'Destroy', market_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Market status', new_market_status_path %>

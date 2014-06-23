@@ -1,0 +1,189 @@
+<%= form_for(@instrument) do |f| %>
+  <% if @instrument.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instrument.errors.count, "error") %> prohibited this instrument from being saved:</h2>
+
+      <ul>
+      <% @instrument.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :SecurityID %><br>
+    <%= f.text_field :SecurityID %>
+  </div>
+  <div class="field">
+    <%= f.label :IssueDate %><br>
+    <%= f.date_select :IssueDate %>
+  </div>
+  <div class="field">
+    <%= f.label :ISIN %><br>
+    <%= f.text_field :ISIN %>
+  </div>
+  <div class="field">
+    <%= f.label :QUANTITY_ISSUED %><br>
+    <%= f.number_field :QUANTITY_ISSUED %>
+  </div>
+  <div class="field">
+    <%= f.label :PAR_VALUE %><br>
+    <%= f.text_field :PAR_VALUE %>
+  </div>
+  <div class="field">
+    <%= f.label :ISSUED_PRICE %><br>
+    <%= f.text_field :ISSUED_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :LAST_TRADED_PRICE %><br>
+    <%= f.text_field :LAST_TRADED_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :WTD_HI_PRICE %><br>
+    <%= f.text_field :WTD_HI_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :MTD_HI_PRICE %><br>
+    <%= f.text_field :MTD_HI_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :YTD_HI_PRICE %><br>
+    <%= f.text_field :YTD_HI_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :P12_HI_PRICE %><br>
+    <%= f.text_field :P12_HI_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :ALL_HI_PRICE %><br>
+    <%= f.text_field :ALL_HI_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :ALL_LO_PRICE %><br>
+    <%= f.text_field :ALL_LO_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :WTD_LO_PRICE %><br>
+    <%= f.text_field :WTD_LO_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :MTD_LO_PRICE %><br>
+    <%= f.text_field :MTD_LO_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :YTD_LO_PRICE %><br>
+    <%= f.text_field :YTD_LO_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :P12_LO_PRICE %><br>
+    <%= f.text_field :P12_LO_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :TDY_SHARE_VOL %><br>
+    <%= f.number_field :TDY_SHARE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :WTD_SHARE_VOL %><br>
+    <%= f.number_field :WTD_SHARE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :MTD_SHARE_VOL %><br>
+    <%= f.number_field :MTD_SHARE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :YTD_SHARE_VOL %><br>
+    <%= f.number_field :YTD_SHARE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :P12_SHARE_VOL %><br>
+    <%= f.number_field :P12_SHARE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :TDY_TRADE_VOL %><br>
+    <%= f.number_field :TDY_TRADE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :WTD_TRADE_VOL %><br>
+    <%= f.number_field :WTD_TRADE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :MTD_TRADE_VOL %><br>
+    <%= f.number_field :MTD_TRADE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :YTD_TRADE_VOL %><br>
+    <%= f.number_field :YTD_TRADE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :P12_TRADE_VOL %><br>
+    <%= f.number_field :P12_TRADE_VOL %>
+  </div>
+  <div class="field">
+    <%= f.label :TDY_TURNOVER %><br>
+    <%= f.text_field :TDY_TURNOVER %>
+  </div>
+  <div class="field">
+    <%= f.label :WTD_TURNOVER %><br>
+    <%= f.text_field :WTD_TURNOVER %>
+  </div>
+  <div class="field">
+    <%= f.label :MTD_TURNOVER %><br>
+    <%= f.text_field :MTD_TURNOVER %>
+  </div>
+  <div class="field">
+    <%= f.label :YTD_TURNOVER %><br>
+    <%= f.text_field :YTD_TURNOVER %>
+  </div>
+  <div class="field">
+    <%= f.label :P12_TURNOVER %><br>
+    <%= f.text_field :P12_TURNOVER %>
+  </div>
+  <div class="field">
+    <%= f.label :PREVIOUS_CLOSE %><br>
+    <%= f.text_field :PREVIOUS_CLOSE %>
+  </div>
+  <div class="field">
+    <%= f.label :FOREIGN_HOLDINGS %><br>
+    <%= f.text_field :FOREIGN_HOLDINGS %>
+  </div>
+  <div class="field">
+    <%= f.label :XC %><br>
+    <%= f.number_field :XC %>
+  </div>
+  <div class="field">
+    <%= f.label :XD %><br>
+    <%= f.number_field :XD %>
+  </div>
+  <div class="field">
+    <%= f.label :XR %><br>
+    <%= f.number_field :XR %>
+  </div>
+  <div class="field">
+    <%= f.label :FOREIGN_PERCENTAGE %><br>
+    <%= f.text_field :FOREIGN_PERCENTAGE %>
+  </div>
+  <div class="field">
+    <%= f.label :DATE %><br>
+    <%= f.date_select :DATE %>
+  </div>
+  <div class="field">
+    <%= f.label :HI_TRADE %><br>
+    <%= f.number_field :HI_TRADE %>
+  </div>
+  <div class="field">
+    <%= f.label :LO_TRADE %><br>
+    <%= f.number_field :LO_TRADE %>
+  </div>
+  <div class="field">
+    <%= f.label :CLOSING_PRICE %><br>
+    <%= f.text_field :CLOSING_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :SendingTime %><br>
+    <%= f.datetime_select :SendingTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

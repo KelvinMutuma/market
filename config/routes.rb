@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  resources :trades
+
+  resources :sectors
+
+  resources :order_books
+
+  resources :market_summaries
+
+  resources :market_statuses
+
+  resources :issuers
+
+  resources :instruments
+
+  resources :indices
+
+  resources :boards
+
+  resources :announcements
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,41 @@
+<%= form_for(@index) do |f| %>
+  <% if @index.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@index.errors.count, "error") %> prohibited this index from being saved:</h2>
+
+      <ul>
+      <% @index.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :INDEX_ID %><br>
+    <%= f.text_field :INDEX_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :INDEX_VALUE %><br>
+    <%= f.text_field :INDEX_VALUE %>
+  </div>
+  <div class="field">
+    <%= f.label :INDEX_HIGH_VALUE %><br>
+    <%= f.text_field :INDEX_HIGH_VALUE %>
+  </div>
+  <div class="field">
+    <%= f.label :INDEX_LOW_VALUE %><br>
+    <%= f.text_field :INDEX_LOW_VALUE %>
+  </div>
+  <div class="field">
+    <%= f.label :MARKET_TYPE %><br>
+    <%= f.text_field :MARKET_TYPE %>
+  </div>
+  <div class="field">
+    <%= f.label :SendingTime %><br>
+    <%= f.text_field :SendingTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

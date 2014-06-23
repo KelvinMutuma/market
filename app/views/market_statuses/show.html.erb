@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @market_status.STATUS %>
+</p>
+
+<p>
+  <strong>Sendingtime:</strong>
+  <%= @market_status.SendingTime %>
+</p>
+
+<%= link_to 'Edit', edit_market_status_path(@market_status) %> |
+<%= link_to 'Back', market_statuses_path %>

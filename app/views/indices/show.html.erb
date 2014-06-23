@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Index id:</strong>
+  <%= @index.INDEX_ID %>
+</p>
+
+<p>
+  <strong>Index value:</strong>
+  <%= @index.INDEX_VALUE %>
+</p>
+
+<p>
+  <strong>Index high value:</strong>
+  <%= @index.INDEX_HIGH_VALUE %>
+</p>
+
+<p>
+  <strong>Index low value:</strong>
+  <%= @index.INDEX_LOW_VALUE %>
+</p>
+
+<p>
+  <strong>Market type:</strong>
+  <%= @index.MARKET_TYPE %>
+</p>
+
+<p>
+  <strong>Sendingtime:</strong>
+  <%= @index.SendingTime %>
+</p>
+
+<%= link_to 'Edit', edit_index_path(@index) %> |
+<%= link_to 'Back', indices_path %>

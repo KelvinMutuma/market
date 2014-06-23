@@ -1,0 +1,173 @@
+<%= form_for(@order_book) do |f| %>
+  <% if @order_book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order_book.errors.count, "error") %> prohibited this order_book from being saved:</h2>
+
+      <ul>
+      <% @order_book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :SecurityID %><br>
+    <%= f.text_field :SecurityID %>
+  </div>
+  <div class="field">
+    <%= f.label :TOTAL_BIDS %><br>
+    <%= f.number_field :TOTAL_BIDS %>
+  </div>
+  <div class="field">
+    <%= f.label :TOTAL_ASKS %><br>
+    <%= f.number_field :TOTAL_ASKS %>
+  </div>
+  <div class="field">
+    <%= f.label :BID1_PRICE %><br>
+    <%= f.text_field :BID1_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :BID2_PRICE %><br>
+    <%= f.text_field :BID2_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :BID3_PRICE %><br>
+    <%= f.text_field :BID3_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :BID4_PRICE %><br>
+    <%= f.text_field :BID4_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :BID5_PRICE %><br>
+    <%= f.text_field :BID5_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :BID1_QTY %><br>
+    <%= f.number_field :BID1_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :BID2_QTY %><br>
+    <%= f.number_field :BID2_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :BID3_QTY %><br>
+    <%= f.number_field :BID3_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :BID4_QTY %><br>
+    <%= f.number_field :BID4_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :BID5_QTY %><br>
+    <%= f.number_field :BID5_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :BID1_SPLITS %><br>
+    <%= f.number_field :BID1_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :BID2_SPLITS %><br>
+    <%= f.number_field :BID2_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :BID3_SPLITS %><br>
+    <%= f.number_field :BID3_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :BID4_SPLITS %><br>
+    <%= f.number_field :BID4_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :BID5_SPLITS %><br>
+    <%= f.number_field :BID5_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK1_PRICE %><br>
+    <%= f.text_field :ASK1_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK2_PRICE %><br>
+    <%= f.text_field :ASK2_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK3_PRICE %><br>
+    <%= f.text_field :ASK3_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK4_PRICE %><br>
+    <%= f.text_field :ASK4_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK5_PRICE %><br>
+    <%= f.text_field :ASK5_PRICE %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK1_QTY %><br>
+    <%= f.number_field :ASK1_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK2_QTY %><br>
+    <%= f.number_field :ASK2_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK3_QTY %><br>
+    <%= f.number_field :ASK3_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK4_QTY %><br>
+    <%= f.number_field :ASK4_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK5_QTY %><br>
+    <%= f.number_field :ASK5_QTY %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK1_SPLITS %><br>
+    <%= f.number_field :ASK1_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK2_SPLITS %><br>
+    <%= f.number_field :ASK2_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK3_SPLITS %><br>
+    <%= f.number_field :ASK3_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK4_SPLITS %><br>
+    <%= f.number_field :ASK4_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :ASK5_SPLITS %><br>
+    <%= f.number_field :ASK5_SPLITS %>
+  </div>
+  <div class="field">
+    <%= f.label :Price %><br>
+    <%= f.text_field :Price %>
+  </div>
+  <div class="field">
+    <%= f.label :Quantity %><br>
+    <%= f.number_field :Quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :MBO_Action %><br>
+    <%= f.number_field :MBO_Action %>
+  </div>
+  <div class="field">
+    <%= f.label :Buy_Sell %><br>
+    <%= f.text_field :Buy_Sell %>
+  </div>
+  <div class="field">
+    <%= f.label :Priority_Sequence %><br>
+    <%= f.text_field :Priority_Sequence %>
+  </div>
+  <div class="field">
+    <%= f.label :SendingTime %><br>
+    <%= f.datetime_select :SendingTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

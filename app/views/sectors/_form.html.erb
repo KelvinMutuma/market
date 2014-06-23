@@ -1,0 +1,37 @@
+<%= form_for(@sector) do |f| %>
+  <% if @sector.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sector.errors.count, "error") %> prohibited this sector from being saved:</h2>
+
+      <ul>
+      <% @sector.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :SECTOR_ID %><br>
+    <%= f.text_field :SECTOR_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :SECT_TURNOVER_TDY %><br>
+    <%= f.number_field :SECT_TURNOVER_TDY %>
+  </div>
+  <div class="field">
+    <%= f.label :SECT_VOLUME_TDY %><br>
+    <%= f.number_field :SECT_VOLUME_TDY %>
+  </div>
+  <div class="field">
+    <%= f.label :SECT_TRADES_TDY %><br>
+    <%= f.number_field :SECT_TRADES_TDY %>
+  </div>
+  <div class="field">
+    <%= f.label :SendingTime %><br>
+    <%= f.datetime_select :SendingTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

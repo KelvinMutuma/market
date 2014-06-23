@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trade volume:</strong>
+  <%= @market_summary.TRADE_VOLUME %>
+</p>
+
+<p>
+  <strong>Share volume:</strong>
+  <%= @market_summary.SHARE_VOLUME %>
+</p>
+
+<p>
+  <strong>Market type:</strong>
+  <%= @market_summary.MARKET_TYPE %>
+</p>
+
+<p>
+  <strong>Sendingtime:</strong>
+  <%= @market_summary.SendingTime %>
+</p>
+
+<%= link_to 'Edit', edit_market_summary_path(@market_summary) %> |
+<%= link_to 'Back', market_summaries_path %>

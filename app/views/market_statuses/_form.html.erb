@@ -1,0 +1,25 @@
+<%= form_for(@market_status) do |f| %>
+  <% if @market_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@market_status.errors.count, "error") %> prohibited this market_status from being saved:</h2>
+
+      <ul>
+      <% @market_status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :STATUS %><br>
+    <%= f.text_field :STATUS %>
+  </div>
+  <div class="field">
+    <%= f.label :SendingTime %><br>
+    <%= f.datetime_select :SendingTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Listing sectors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector id</th>
+      <th>Sect turnover tdy</th>
+      <th>Sect volume tdy</th>
+      <th>Sect trades tdy</th>
+      <th>Sendingtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sectors.each do |sector| %>
+      <tr>
+        <td><%= sector.SECTOR_ID %></td>
+        <td><%= sector.SECT_TURNOVER_TDY %></td>
+        <td><%= sector.SECT_VOLUME_TDY %></td>
+        <td><%= sector.SECT_TRADES_TDY %></td>
+        <td><%= sector.SendingTime %></td>
+        <td><%= link_to 'Show', sector %></td>
+        <td><%= link_to 'Edit', edit_sector_path(sector) %></td>
+        <td><%= link_to 'Destroy', sector, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sector', new_sector_path %>

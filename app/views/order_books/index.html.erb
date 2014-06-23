@@ -1,0 +1,101 @@
+<h1>Listing order_books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Securityid</th>
+      <th>Total bids</th>
+      <th>Total asks</th>
+      <th>Bid1 price</th>
+      <th>Bid2 price</th>
+      <th>Bid3 price</th>
+      <th>Bid4 price</th>
+      <th>Bid5 price</th>
+      <th>Bid1 qty</th>
+      <th>Bid2 qty</th>
+      <th>Bid3 qty</th>
+      <th>Bid4 qty</th>
+      <th>Bid5 qty</th>
+      <th>Bid1 splits</th>
+      <th>Bid2 splits</th>
+      <th>Bid3 splits</th>
+      <th>Bid4 splits</th>
+      <th>Bid5 splits</th>
+      <th>Ask1 price</th>
+      <th>Ask2 price</th>
+      <th>Ask3 price</th>
+      <th>Ask4 price</th>
+      <th>Ask5 price</th>
+      <th>Ask1 qty</th>
+      <th>Ask2 qty</th>
+      <th>Ask3 qty</th>
+      <th>Ask4 qty</th>
+      <th>Ask5 qty</th>
+      <th>Ask1 splits</th>
+      <th>Ask2 splits</th>
+      <th>Ask3 splits</th>
+      <th>Ask4 splits</th>
+      <th>Ask5 splits</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Mbo action</th>
+      <th>Buy sell</th>
+      <th>Priority sequence</th>
+      <th>Sendingtime</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order_books.each do |order_book| %>
+      <tr>
+        <td><%= order_book.SecurityID %></td>
+        <td><%= order_book.TOTAL_BIDS %></td>
+        <td><%= order_book.TOTAL_ASKS %></td>
+        <td><%= order_book.BID1_PRICE %></td>
+        <td><%= order_book.BID2_PRICE %></td>
+        <td><%= order_book.BID3_PRICE %></td>
+        <td><%= order_book.BID4_PRICE %></td>
+        <td><%= order_book.BID5_PRICE %></td>
+        <td><%= order_book.BID1_QTY %></td>
+        <td><%= order_book.BID2_QTY %></td>
+        <td><%= order_book.BID3_QTY %></td>
+        <td><%= order_book.BID4_QTY %></td>
+        <td><%= order_book.BID5_QTY %></td>
+        <td><%= order_book.BID1_SPLITS %></td>
+        <td><%= order_book.BID2_SPLITS %></td>
+        <td><%= order_book.BID3_SPLITS %></td>
+        <td><%= order_book.BID4_SPLITS %></td>
+        <td><%= order_book.BID5_SPLITS %></td>
+        <td><%= order_book.ASK1_PRICE %></td>
+        <td><%= order_book.ASK2_PRICE %></td>
+        <td><%= order_book.ASK3_PRICE %></td>
+        <td><%= order_book.ASK4_PRICE %></td>
+        <td><%= order_book.ASK5_PRICE %></td>
+        <td><%= order_book.ASK1_QTY %></td>
+        <td><%= order_book.ASK2_QTY %></td>
+        <td><%= order_book.ASK3_QTY %></td>
+        <td><%= order_book.ASK4_QTY %></td>
+        <td><%= order_book.ASK5_QTY %></td>
+        <td><%= order_book.ASK1_SPLITS %></td>
+        <td><%= order_book.ASK2_SPLITS %></td>
+        <td><%= order_book.ASK3_SPLITS %></td>
+        <td><%= order_book.ASK4_SPLITS %></td>
+        <td><%= order_book.ASK5_SPLITS %></td>
+        <td><%= order_book.Price %></td>
+        <td><%= order_book.Quantity %></td>
+        <td><%= order_book.MBO_Action %></td>
+        <td><%= order_book.Buy_Sell %></td>
+        <td><%= order_book.Priority_Sequence %></td>
+        <td><%= order_book.SendingTime %></td>
+        <td><%= link_to 'Show', order_book %></td>
+        <td><%= link_to 'Edit', edit_order_book_path(order_book) %></td>
+        <td><%= link_to 'Destroy', order_book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order book', new_order_book_path %>

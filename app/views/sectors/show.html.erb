@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sector id:</strong>
+  <%= @sector.SECTOR_ID %>
+</p>
+
+<p>
+  <strong>Sect turnover tdy:</strong>
+  <%= @sector.SECT_TURNOVER_TDY %>
+</p>
+
+<p>
+  <strong>Sect volume tdy:</strong>
+  <%= @sector.SECT_VOLUME_TDY %>
+</p>
+
+<p>
+  <strong>Sect trades tdy:</strong>
+  <%= @sector.SECT_TRADES_TDY %>
+</p>
+
+<p>
+  <strong>Sendingtime:</strong>
+  <%= @sector.SendingTime %>
+</p>
+
+<%= link_to 'Edit', edit_sector_path(@sector) %> |
+<%= link_to 'Back', sectors_path %>

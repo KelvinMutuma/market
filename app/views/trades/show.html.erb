@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scaffold:</strong>
+  <%= @trade.scaffold %>
+</p>
+
+<p>
+  <strong>Securityid:</strong>
+  <%= @trade.SecurityID %>
+</p>
+
+<p>
+  <strong>Board id:</strong>
+  <%= @trade.BOARD_ID %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @trade.Price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @trade.Quantity %>
+</p>
+
+<p>
+  <strong>Transacttime:</strong>
+  <%= @trade.TransactTime %>
+</p>
+
+<p>
+  <strong>Hi trade:</strong>
+  <%= @trade.HI_TRADE %>
+</p>
+
+<p>
+  <strong>Lo trade:</strong>
+  <%= @trade.LO_TRADE %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @trade.DATE %>
+</p>
+
+<p>
+  <strong>Sendingtime:</strong>
+  <%= @trade.SendingTime %>
+</p>
+
+<%= link_to 'Edit', edit_trade_path(@trade) %> |
+<%= link_to 'Back', trades_path %>

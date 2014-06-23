@@ -1,0 +1,25 @@
+<%= form_for(@issuer) do |f| %>
+  <% if @issuer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@issuer.errors.count, "error") %> prohibited this issuer from being saved:</h2>
+
+      <ul>
+      <% @issuer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ISSUER_ID %><br>
+    <%= f.text_field :ISSUER_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :SendingTime %><br>
+    <%= f.datetime_select :SendingTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

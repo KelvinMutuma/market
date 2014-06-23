@@ -1,0 +1,33 @@
+<%= form_for(@market_summary) do |f| %>
+  <% if @market_summary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@market_summary.errors.count, "error") %> prohibited this market_summary from being saved:</h2>
+
+      <ul>
+      <% @market_summary.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :TRADE_VOLUME %><br>
+    <%= f.number_field :TRADE_VOLUME %>
+  </div>
+  <div class="field">
+    <%= f.label :SHARE_VOLUME %><br>
+    <%= f.number_field :SHARE_VOLUME %>
+  </div>
+  <div class="field">
+    <%= f.label :MARKET_TYPE %><br>
+    <%= f.text_field :MARKET_TYPE %>
+  </div>
+  <div class="field">
+    <%= f.label :SendingTime %><br>
+    <%= f.datetime_select :SendingTime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

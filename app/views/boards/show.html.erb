@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Board id:</strong>
+  <%= @board.BOARD_ID %>
+</p>
+
+<p>
+  <strong>Current session id:</strong>
+  <%= @board.CURRENT_SESSION_ID %>
+</p>
+
+<p>
+  <strong>Sendingtime:</strong>
+  <%= @board.SendingTime %>
+</p>
+
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>
