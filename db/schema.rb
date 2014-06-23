@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140623114651) do
+ActiveRecord::Schema.define(version: 20140623120059) do
 
   create_table "announcements", force: true do |t|
     t.string   "MSG_NAME"
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 20140623114651) do
 
   create_table "order_books", force: true do |t|
     t.string   "SecurityID"
+    t.string   "BOARD_ID"
     t.integer  "TOTAL_BIDS"
     t.integer  "TOTAL_ASKS"
     t.float    "BID1_PRICE"
